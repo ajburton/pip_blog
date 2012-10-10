@@ -1,0 +1,13 @@
+defaults: &defaults
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  min_messages: WARNING
+
+development:
+  <<: *defaults
+  database: fbyc_memebership_development
+
+test: &test
+  <<: *defaults
+  database: fbyc_membership_test
