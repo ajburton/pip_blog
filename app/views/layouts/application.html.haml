@@ -4,6 +4,7 @@
     %title "Somthings Not Right, Yo."
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
+    = auto_discovery_link_tag :atom
     = csrf_meta_tags
     = yield(:head)
   %body
