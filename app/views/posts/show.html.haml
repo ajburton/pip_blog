@@ -12,3 +12,17 @@
 = link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?"
 \|
 = link_to 'Show Posts', posts_path
+
+%h3 Comments
+- @post.comments.each do |comment|
+  .comments
+    %p 
+      %b By: 
+      = comment.author
+    %p 
+      %b Comment:
+      = comment.body
+    = button_to "Delete This Comment", [@post, comment], :confirm => "Are you sure?", :method => :delete
+    %hr
+
+= render 'comments_form'
